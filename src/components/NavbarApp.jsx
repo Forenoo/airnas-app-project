@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NavbarApp = ({ dataNavbar, isButton, onClick }) => {
+  const { country, city } = dataNavbar || {};
   return (
     <nav className="container relative flex h-[100px] items-center justify-between">
       {/* Navbar Logo */}
@@ -37,8 +38,7 @@ const NavbarApp = ({ dataNavbar, isButton, onClick }) => {
               Lokasi
             </span>
             <span className="text-[16px] font-bold text-primary-600">
-              {dataNavbar?.country || "Loading"},{" "}
-              {dataNavbar?.city || "Loading"}
+              {country || "Loading"}, {city || "Loading"}
             </span>
           </div>
         </div>

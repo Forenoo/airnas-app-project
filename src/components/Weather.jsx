@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AppClicked from "./Application/AppClicked";
 import AppUnclicked from "./Application/AppUnclicked";
 import NavbarApp from "./NavbarApp";
@@ -8,11 +8,11 @@ const Weather = ({ data }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  if (isClicked) {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
-  }, []);
+    }, 3000);
+  }
 
   return (
     <>
