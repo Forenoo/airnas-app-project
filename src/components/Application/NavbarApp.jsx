@@ -20,7 +20,7 @@ const NavbarApp = ({ dataNavbar, isButton, onClick }) => {
       {isButton ? (
         <button
           onClick={onClick}
-          className="cursor-pointer rounded-[5px] bg-primary-500 px-[40px] py-[10px] text-[18px] font-bold text-white hover:bg-primary-600 "
+          className="cursor-pointer rounded-[5px] bg-primary-500 px-[40px] py-[10px] text-[18px] font-bold text-white hover:bg-primary-600 btn-shadow"
         >
           Kembali
         </button>

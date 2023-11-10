@@ -1,8 +1,8 @@
 import { useState } from "react";
 import AppClicked from "./Application/AppClicked";
 import AppUnclicked from "./Application/AppUnclicked";
-import NavbarApp from "./NavbarApp";
-import Loading from "./Loading";
+import NavbarApp from "./Application/NavbarApp";
+import Loading from "./Application/Loading";
 
 const Weather = ({ data }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -27,7 +27,7 @@ const Weather = ({ data }) => {
                 isButton={true}
                 onClick={() => setIsClicked(false)}
               />
-              <AppClicked onClick={() => setIsClicked(false)} />
+              <AppClicked weatherData={data} />
             </>
           )}
         </>
